@@ -1,15 +1,17 @@
 import os
 import re
-import movie_list
+import movie_data
 
+# Fetch template file contents
 def get_template(file):
     template_file = open(file, 'r')
     content = template_file.read()
     template_file.close()
     return content
-    
+
+# Render the movie tile content
 def create_movie_tiles_content(movies):
-    movie_tile_content = get_template('templates/movie_tile_content.html')
+    movie_tile_template = get_template('templates/movie_tile_content.html')
 
     # The HTML content for this section of the page
     content = ''
@@ -23,14 +25,14 @@ def create_movie_tiles_content(movies):
                               else None)
 
         # Append the tile for the movie with its content filled in
-        content += movie_tile_content.format(
+        content += movie_tile_template.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
             trailer_youtube_id=trailer_youtube_id
         )
     return content
 
-
+# Render the index file
 def create_index_file(movies):
     main_page_head = get_template('templates/main_page_head.html')
     main_page_content = get_template('templates/main_page_content.html')
@@ -45,4 +47,4 @@ def create_index_file(movies):
     output_file.write(main_page_head + rendered_content)
     output_file.close()
     
-create_index_file(movie_list.movies)
+create_index_file(movie_data.movies)
