@@ -12,8 +12,8 @@ def render_movie_tiles(movies):
 
 # Render the index file
 def render_index_file(movies):
-    main_page_head = get_template('templates/main_page_head.html')
-    main_page_content = get_template('templates/main_page_content.html')
+    main_page_head = mtw_utils.get_template('templates/main_page_head.html')
+    main_page_content = mtw_utils.get_template('templates/main_page_content.html')
     # Create or overwrite the output file
     output_file = open('index.html', 'w')
 
