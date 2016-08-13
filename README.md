@@ -14,12 +14,14 @@ The dynamically generated index.html file has already been created. If you wish 
 
 - You can delete the existing index.html to prove that it is getting generated.
 - Ensure that you have Python installed on your system.
-- cd into the project `cd fsnd-movie-trailer` and then `python main.py`
+- cd into the project `cd fsnd-movie-trailer` 
 
 ## Using the Application
-Point your webserver to index.html
+Point your browser to index.html
 
 ## Attribution
+[Wikipedia](https://www.wikipedia.org/)
 
+[YouTube](https://www.youtube.com/)
 
 
