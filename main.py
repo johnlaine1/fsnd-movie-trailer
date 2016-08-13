@@ -10,7 +10,7 @@ def get_template(file):
     return content
 
 # Render the movie tile content
-def create_movie_tiles_content(movies):
+def render_movie_tiles(movies):
     movie_tile_template = get_template('templates/movie_tile_content.html')
 
     # The HTML content for this section of the page
@@ -33,7 +33,7 @@ def create_movie_tiles_content(movies):
     return content
 
 # Render the index file
-def create_index_file(movies):
+def render_index_file(movies):
     main_page_head = get_template('templates/main_page_head.html')
     main_page_content = get_template('templates/main_page_content.html')
     # Create or overwrite the output file
@@ -41,10 +41,10 @@ def create_index_file(movies):
 
     # Replace the movie tiles placeholder generated content
     rendered_content = main_page_content.format(
-        movie_tiles=create_movie_tiles_content(movies))
+        movie_tiles=render_movie_tiles(movies))
 
     # Output the file
     output_file.write(main_page_head + rendered_content)
     output_file.close()
     
-create_index_file(movie_data.movies)
+render_index_file(movie_data.movies)
