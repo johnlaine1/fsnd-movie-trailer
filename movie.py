@@ -14,3 +14,6 @@ class Movie():
         self.storyline = storyline
         self.poster_image_url = poster_image
         self.trailer_youtube_url = trailer
+        
+    def render_movie_tile(self):
+        
