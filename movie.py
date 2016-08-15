@@ -13,12 +13,13 @@ class Movie():
     '''
     
     def __init__(self, title, storyline, poster_image, 
-                 trailer, template):
+                 trailer, template, genre):
         self.title = title
         self.storyline = storyline
         self.poster_image_url = poster_image
         self.trailer_youtube_url = trailer
         self.template = template
+        self.genre = genre
         
     def render(self):
         ''' Render the movie into html '''
@@ -35,7 +36,8 @@ class Movie():
         content = self.template.format(
             movie_title=self.title,
             poster_image_url=self.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            movie_genre=self.genre
         )
         
         return content

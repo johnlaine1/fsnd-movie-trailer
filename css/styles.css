@@ -1,5 +1,5 @@
 body {
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
 #trailer .modal-dialog {
@@ -43,4 +43,11 @@ body {
     left: 0;
     top: 0;
     background-color: white;
+}
+
+.genre-filter,
+.genre-title {
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 20px
 }
