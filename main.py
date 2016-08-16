@@ -28,6 +28,7 @@ def render_filter_items(movies):
         content += li.format(id=genre, name=genre) + '\n'
         
     return content
+
 # Render the index file
 def render_index_file(movies):
     ''' Create and combine the content to render the page and output

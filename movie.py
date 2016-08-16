@@ -22,7 +22,7 @@ class Movie():
         self.genre = genre
         
     def render(self):
-        ''' Render the movie into html '''
+        ''' Render the movie data into html '''
         
         content = ''
         # Extract the youtube ID from the url
