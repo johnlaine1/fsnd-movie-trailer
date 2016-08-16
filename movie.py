@@ -37,7 +37,7 @@ class Movie():
             movie_title=self.title,
             poster_image_url=self.poster_image_url,
             trailer_youtube_id=trailer_youtube_id,
-            movie_genre=self.genre
+            movie_genre=' '.join(self.genre)
         )
         
         return content

@@ -26,28 +26,25 @@ $(function() {
       }));
   });
   
-  // Filter the content by Genre and update page title.
+  // Filter the content by Genre
   $('.movie-filter').on('click', function(event) {
     var $movies = $('.movie-tile');
     var filter = event.target.id;
-
-    // If the 'all' filter is selected
+    
+    console.log(filter);
     if (filter === 'all') {
       $movies.hide().first().show("fast", function showNext() {
         $(this).next("div").show("fast", showNext);
       });
-    // If any other filter is selected
     } else {
       $movies.hide();
       $movies.filter('.' + filter).show('fast');
     }
-
+    
+    
     // Set the list and page title
     $('#genre-title').html((filter).replace('-', ' '));
     $('.genre-filter').html((filter).replace('-', ' ') + '<span class="caret"></span>');
   });
-        
-
-  
 });
 
