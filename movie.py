@@ -25,7 +25,8 @@ class Movie():
     def render(self):
         ''' Render the movie data into html
 
-        Returns: An html string
+        Returns:
+            An html string representing the movie.
         '''
 
         content = ''
