@@ -77,6 +77,3 @@ def get_movies(movie_ids):
 
     return movies
 
-# movie_ids = ['278', '238', '424', '20352', '9340', '637', '508', '38757', '680', '3049', '278927']
-
-# movies = get_movies(movie_ids)
