@@ -20,7 +20,7 @@ The dynamically generated index.html file has already been created. If you wish 
 Point your browser to index.html
 
 ## Attribution
-[Wikipedia](https://www.wikipedia.org/)
+[The Movie DB](https://www.themoviedb.org/)
 
 [YouTube](https://www.youtube.com/)
 
