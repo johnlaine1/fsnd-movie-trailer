@@ -82,4 +82,11 @@ def render_index_file(movies):
     output_file.write(page)
     output_file.close()
 
-render_index_file(movie_data.movies)
+# A list of IDs obtained from 'The Movie DB', https://www.themoviedb.org/
+# If you search for a movie and click on it, you will see a number in the URL
+# This is the URL used by the program.
+# If you add or remove IDs from the list, the related movie will be added or
+# removed from the view along with the filter item for the related genre.
+movie_ids = ['278', '238', '424', '20352', '9340', '637', '508', '38757', '680', '3049', '278927']
+
+render_index_file(movie_data.get_movies(movie_ids))
