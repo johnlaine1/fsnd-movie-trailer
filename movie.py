@@ -1,18 +1,19 @@
 import re
 
 class Movie():
-    ''' A class used to store movie related information .
-    
+    ''' A class used to store movie related information.
+
     Attributes:
         title (str): The title of the movie.
         storyline (str): A brief description of the movie.
         poster_image (str): A URL to an image file of poster for the movie.
         trailer_youtube_url: A URL to a youtube video for the movie.
         template (str): A html template used to render the movie.
-        
+        genre (list): A list of strings describing the movie genres
+
     '''
-    
-    def __init__(self, title, storyline, poster_image, 
+
+    def __init__(self, title, storyline, poster_image,
                  trailer, template, genre):
         self.title = title
         self.storyline = storyline
@@ -20,11 +21,15 @@ class Movie():
         self.trailer_youtube_url = trailer
         self.template = template
         self.genre = genre
-        
+
     def render(self):
-        ''' Render the movie data into html '''
-        
+        ''' Render the movie data into html
+
+        Returns: An html string
+        '''
+
         content = ''
+
         # Extract the youtube ID from the url
         youtube_id_match = re.search(
             r'(?<=v=)[^&#]+', self.trailer_youtube_url)
@@ -39,5 +44,5 @@ class Movie():
             trailer_youtube_id=trailer_youtube_id,
             movie_genre=' '.join(self.genre)
         )
-        
+
         return content
