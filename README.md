@@ -14,7 +14,8 @@ The dynamically generated index.html file has already been created. If you wish 
 
 - You can delete the existing index.html to prove that it is getting generated.
 - Ensure that you have Python installed on your system.
-- cd into the project `cd fsnd-movie-trailer` 
+- Ensure that you have Requests installed on your system or run `pip install requests`.
+- cd into the project `cd fsnd-movie-trailer`
 
 ## Using the Application
 Point your browser to index.html
