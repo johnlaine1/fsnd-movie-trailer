@@ -40,6 +40,8 @@ def render_filter_items(movies):
     # Filter out the duplicates from the genres list.
     genres = list(set(all_genres))
 
+    genres.sort()
+
     # This is the 'All' filter selection
     content = '<li><a class="movie-filter" id="all" href="#">all</a></li>\n'
 
