@@ -55,3 +55,7 @@ body {
 .genre-title {
     text-align: center;
 }
+
+.navbar-fixed-bottom {
+    margin-bottom: 0;
+}
